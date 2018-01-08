@@ -1,4 +1,6 @@
 node_modules/
 .eslintrc
 .jshintrc
-dev.jshintrcyarn.lock
+dev.js
+.jshintrc
+yarn.lock
