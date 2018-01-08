@@ -1,17 +1,27 @@
 var Backbone = require('backbone');
 
 module.exports = Backbone.View.extend({
+
     template: _.template(`
-        <div class="selectable">
-            <i class="fa <%= fontClass%></i>
+        <div class="<%=pfx%>-selectable">
+            <i class="fa <%= fontClass%>"></i>
             <span class="selectSample"><%= fontSample %></span>
         </div>
     `),
+
+    events: {
+        'click': 'selectEl'
+    },
 
     initialize(o) {
         this.$el.html(this.template(this.model.attributes));
     },
 
+    selectEl(e) {
+        var faClass = this.model.get('fontClass');
+        this.trigger('onChange', {class: faClass});
+    },
+    
     render() {
         return this;
     }

@@ -5,8 +5,8 @@ module.exports = {
     entry: './src',
     output: {
         path: path.resolve(__dirname,'build'),
-        filename: 'googlefontselect.min.js',
-        library: 'googlefontselect',
+        filename: 'bzfontselector.min.js',
+        library: 'bzfontselector',
         libraryTarget: 'umd'
     },
 

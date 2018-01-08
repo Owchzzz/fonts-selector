@@ -10,9 +10,10 @@ import { fontawesome, opts } from './config/config';
 
 
 
-module.exports = ( config => {
+module.exports = (o) => {
     let fcontainer;
     let fonts;
+    let $el;
     return {
 
         init(c) {
@@ -29,14 +30,32 @@ module.exports = ( config => {
                 if(!c.fonts) {
                     fonts = fontawesome;
                 }
+                // If config setting for chage
+                if(c.onChange) {
+                    this.changeEvent = c.onChange;
+                }
+                
             }
-            let $el = $(c.container);
-             // Empty the html
-             $el.html('');
-            var fcontainer = new FontSelectorContainer();
-            fcontainer.initialize(fonts);
+            $el = $(c.container);
+
+            
+             
+             $el.html(''); // Empty the html
+
+            //initialize the container
+            fcontainer = new FontSelectorContainer();
+            opts.parent = this;
+            fcontainer.initialize(fonts,opts);
             console.log(fcontainer.render());
             $el.append(fcontainer.render());
+
+            return this;
+        },
+        setChange(e) {
+            $el.on('change',e);
+        },
+        getValue() {
+            return fcontainer.value();
         }
     }
-})();
+}
