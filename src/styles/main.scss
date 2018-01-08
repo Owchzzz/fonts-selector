@@ -1,0 +1,7 @@
+/**
+Style imports
+**/
+@import './config/variables';
+.#{$prefix} {
+    background-color:$primary-color;
+}
