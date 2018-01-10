@@ -1,6 +1,6 @@
 {
   "name": "font-selector",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A Font Selector for Google/FontAwesome or an array of fonts!",
   "main": "index.js",
   "babel": {
@@ -12,7 +12,8 @@
   "scripts": {
     "lint": "eslint src",
     "start": "cross-env WEBPACK_ENV=dev webpack-dev-server --host localhost --port 8080 --hot --progress --inline",
-    "build": "npm run lint && webpack && npm version patch --force --no-tty",
+    "build": " npm run patch && npm run lint && webpack ",
+    "patch": "npm --no-git-tag-version version patch",
     "dev": "node dev.js",
     "test": "run"
   },
