@@ -1,27 +1,28 @@
+// Import
 import jQuery from 'jquery';
 import * as _ from 'underscore';
+
 // Setup jquery
 window.$ = window.jQuery = jQuery;
 window._ = _;
 
-var FontSelectorContainer = require('./FontSelectorContainer');
 import styles from './styles/main.scss';
 import { fontawesome, opts } from './config/config';
 
-
+// Require dependencies
+var FontSelectorContainer = require('./FontSelectorContainer');
 
 module.exports = (o) => {
     let fcontainer;
     let fonts;
     let $el;
     return {
-
+        value: false,
         /**
          * Initialize the module
          * @param {Object} c Object Configurations 
          */
         init(c) {
-            
             // Check if variable exists
             if(!c) {
                 console.log('[ERROR]: Can not initialize selector plugin without configurations.')

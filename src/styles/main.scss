@@ -46,7 +46,7 @@ Style imports
         position:absolute;
         width: 100%;
         min-width: 300px;
-        top:31;
+        top:42px;
         left:0;
         
         display:none;
@@ -75,27 +75,31 @@ Style imports
             max-height:300px;
             overflow-y:scroll;
             .#{$prefix}-selectable {
-           
-                width:30.33%;
-                height:45px;
+                
+                
+                width: $fontWidth +0%;
                 vertical-align: center;
                 float:left;
                 text-align:center;
-                padding:1%;
                 background-color:white;
                 cursor:pointer;
                 display:block;
                 
-            
-                &:hover {
-                    background-color:#fafafa;
+                .selectable-content {
+                    
+            border:1px solid #fafafa;
+                    
+                    &:hover {
+                        background-color:#fafafa;
+                    }
+                    i {
+                        font-size:18px;
+                        display:block;
+                        margin: 10px auto;
+                        color:#464646;
+                    }
                 }
-                i {
-                    font-size:18px;
-                    display:block;
-                    margin: 10px auto;
-                    color:#464646;
-                }
+                
             }
         }
         

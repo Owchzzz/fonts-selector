@@ -4,7 +4,10 @@ module.exports = Backbone.View.extend({
 
     template: _.template(`
         <div class="<%=pfx%>-selectable">
-            <i class="fa <%= fontClass%>"></i>
+            <div class="selectable-content">
+                <i class="fa <%= fontClass%>"></i>
+                <span class="preview"><%= preview%></span>
+            </div>
         </div>
     `),
 
