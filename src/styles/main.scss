@@ -5,28 +5,49 @@ Style imports
 @import './mixins';
 .#{$prefix} {
     background-color:$mainBgColor;
-    width:200px;
+    width:100%;
     font-family:$fontVar;
     position:relative;
-    -webket-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
     
     .selector-btn {
+        position:absolute;
         display:block;
+        width:100%;
         text-align:center;
-        line-height:2;
-        padding:4px 8px;
         cursor:pointer;
-        background: linear-gradient($btnTopColor, $btnBaseColor);
+        height:45px;
         font-size:12px;
-        box-shadow:inset 0px 0px 0px 1px #b3b3b3;
-        @include border-radius(4px);
+        background-color:none;
+        overflow:hidden;
+        border-radius:(8px);
+        border:1px solid #d3d3d3;
+        input {
+            padding:3px 6px;
+            position: absolute;
+            left:0;
+            width:80%;
+            height:100%;
+            border:0px;
+        }
+        i {
+            font-size:18px;
+            line-height:2.3;
+            position: absolute;
+            right:0;
+            width:20%;
+            height:100%;
+            display:block;
+            background: linear-gradient($btnTopColor, $btnBaseColor);
+            border:0;
+        }
     }
     .selectors {
         position:absolute;
-        width: 400px;
+        width: 100%;
+        min-width: 300px;
         top:31;
         left:0;
-        border: 1px solid #fafafa;
         
         display:none;
         .header {
@@ -56,12 +77,11 @@ Style imports
             .#{$prefix}-selectable {
            
                 width:30.33%;
-                height:150px;
+                height:45px;
                 vertical-align: center;
                 float:left;
                 text-align:center;
                 padding:1%;
-                border:1px solid #fafafa;
                 background-color:white;
                 cursor:pointer;
                 display:block;
@@ -71,9 +91,9 @@ Style imports
                     background-color:#fafafa;
                 }
                 i {
-                    font-size:24px;
+                    font-size:18px;
                     display:block;
-                    margin: 40px auto;
+                    margin: 10px auto;
                     color:#464646;
                 }
             }

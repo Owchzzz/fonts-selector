@@ -23,8 +23,6 @@ module.exports = (o) => {
                 console.log('[ERROR]: Can not initialize selector plugin without configurations.')
                 return;
             }
-
-            // Initialize the fonts
             else {
                 // If no fonts are defined
                 if(!c.fonts) {
@@ -36,11 +34,8 @@ module.exports = (o) => {
                 }
                 
             }
-            $el = $(c.container);
-
-            
-             
-             $el.html(''); // Empty the html
+            $el = $(c.container);  
+            $el.html(''); // Empty the html
 
             //initialize the container
             fcontainer = new FontSelectorContainer();

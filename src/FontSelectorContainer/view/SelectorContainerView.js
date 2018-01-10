@@ -9,7 +9,7 @@ module.exports = Backbone.View.extend({
 
     template: _.template(`
         <div class="<%=pfx%>">
-            <div class="selector-btn"><i id="fontClass"></i> <span id="fontName">SELECT A FONT</span></div>
+            <div class="selector-btn"><input id="fontName" value="SELECT A FONT"/><i id="fontClass"></i> </div>
 
             <div class="selectors">
                 <div class="header"><h1>SELECT A FONT</H1> <b class="backBtn">Back</b>
@@ -46,7 +46,7 @@ module.exports = Backbone.View.extend({
     },
 
     changed(data) {
-        $(this.selectorBtn).find('#fontName').html(data.class);
+        $(this.selectorBtn).find('#fontName').val(data.class);
         $(this.selectorBtn).find('#fontClass').removeClass().addClass('fa '+data.class);
 
         this.model.set('font',data.class);

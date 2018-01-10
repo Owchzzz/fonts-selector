@@ -1,5 +1,5 @@
 {
-  "name": "font-selector-premium",
+  "name": "font-selector",
   "version": "1.0.0",
   "description": "A Font Selector for Google/FontAwesome or an array of fonts!",
   "main": "index.js",

@@ -5,7 +5,6 @@ module.exports = Backbone.View.extend({
     template: _.template(`
         <div class="<%=pfx%>-selectable">
             <i class="fa <%= fontClass%>"></i>
-            <span class="selectSample"><%= fontSample %></span>
         </div>
     `),
 
