@@ -1,6 +1,6 @@
 {
   "name": "font-selector",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "A Font Selector for Google/FontAwesome or an array of fonts!",
   "main": "index.js",
   "babel": {
