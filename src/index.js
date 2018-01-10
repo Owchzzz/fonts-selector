@@ -16,6 +16,10 @@ module.exports = (o) => {
     let $el;
     return {
 
+        /**
+         * Initialize the module
+         * @param {Object} c Object Configurations 
+         */
         init(c) {
             
             // Check if variable exists
@@ -40,15 +44,27 @@ module.exports = (o) => {
             //initialize the container
             fcontainer = new FontSelectorContainer();
             opts.parent = this;
+
+            //Initialize the container
             fcontainer.initialize(fonts,opts);
-            console.log(fcontainer.render());
+
+            // Append to element
             $el.append(fcontainer.render());
 
             return this;
         },
+
+        /**
+         * Attach an on change function
+         * @param {Function} e Function call 
+         */
         setChange(e) {
             $el.on('change',e);
         },
+
+        /**
+         * Get the value
+         */
         getValue() {
             return fcontainer.value();
         }
