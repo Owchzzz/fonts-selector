@@ -1,6 +1,6 @@
 {
   "name": "font-selector",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A Font Selector for Google/FontAwesome or an array of fonts!",
   "main": "build/bzfontselector.min.js",
   "babel": {
