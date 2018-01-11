@@ -1,9 +1,7 @@
 // Import
-import jQuery from 'jquery';
 import * as _ from 'underscore';
 
 // Setup jquery
-window.$ = window.jQuery = jQuery;
 window._ = _;
 
 import styles from './styles/main.scss';
