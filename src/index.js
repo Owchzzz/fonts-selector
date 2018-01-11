@@ -37,7 +37,7 @@ module.exports = (o) => {
                 }
                 
             }
-            $el = $(c.container);  
+            $el = $(c.container);
             $el.html(''); // Empty the html
 
             //initialize the container

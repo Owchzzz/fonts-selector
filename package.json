@@ -11,7 +11,7 @@
   },
   "scripts": {
     "lint": "eslint src",
-    "start": "cross-env WEBPACK_ENV=dev webpack-dev-server --host localhost --port 8080 --hot --progress --inline",
+    "start": "cross-env WEBPACK_ENV=dev webpack-dev-server --host localhost --port 8081 --hot --progress --inline",
     "build": " npm run patch && npm run lint && webpack ",
     "patch": "npm --no-git-tag-version version patch",
     "dev": "node dev.js",
